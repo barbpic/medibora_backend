@@ -1,0 +1,112 @@
+{
+  "model_info": {
+    "algorithm": "Logistic Regression",
+    "regularization_C": 1.0,
+    "class_weight": "balanced",
+    "training_date": "2026-04-20T13:21:30.418067",
+    "n_samples_total": 35649,
+    "n_features": 12,
+    "features_used": [
+      "Heart Rate",
+      "Respiratory Rate",
+      "Body Temperature",
+      "Oxygen Saturation",
+      "Systolic Blood Pressure",
+      "Diastolic Blood Pressure",
+      "Age",
+      "Derived_HRV",
+      "Derived_Pulse_Pressure",
+      "Derived_BMI",
+      "Derived_MAP",
+      "Gender_encoded"
+    ]
+  },
+  "data_split": {
+    "training_size": 28519,
+    "training_percentage": 80,
+    "test_size": 7130,
+    "test_percentage": 20,
+    "cv_folds": 5
+  },
+  "performance_metrics": {
+    "accuracy": 0.6681626928471248,
+    "accuracy_percentage": 66.81626928471248,
+    "sensitivity": 0.6782562182401711,
+    "sensitivity_percentage": 67.82562182401712,
+    "specificity": 0.6570333235033913,
+    "specificity_percentage": 65.70333235033912,
+    "precision": 0.6855907001892403,
+    "precision_percentage": 68.55907001892403,
+    "f1_score": 0.6819037375638612,
+    "f1_score_percentage": 68.19037375638612,
+    "roc_auc": 0.7448099996300955
+  },
+  "confusion_matrix": {
+    "true_negatives": 2228,
+    "false_positives": 1163,
+    "false_negatives": 1203,
+    "true_positives": 2536
+  },
+  "cross_validation": {
+    "folds": 5,
+    "scores": [
+      0.6612903225806451,
+      0.6681276297335204,
+      0.6623422159887798,
+      0.6507713884992987,
+      0.6578993512186568
+    ],
+    "mean_accuracy": 0.6600861816041802,
+    "std_accuracy": 0.005705298105697229
+  },
+  "coefficients": [
+    {
+      "feature": "Heart Rate",
+      "coefficient": 0.8327841648584577
+    },
+    {
+      "feature": "Derived_BMI",
+      "coefficient": 0.38106592495487246
+    },
+    {
+      "feature": "Respiratory Rate",
+      "coefficient": -0.029459273426732484
+    },
+    {
+      "feature": "Age",
+      "coefficient": -0.020587644071341355
+    },
+    {
+      "feature": "Derived_HRV",
+      "coefficient": -0.01763944256741819
+    },
+    {
+      "feature": "Gender_encoded",
+      "coefficient": 0.011700135757253373
+    },
+    {
+      "feature": "Oxygen Saturation",
+      "coefficient": 0.008939218325480152
+    },
+    {
+      "feature": "Derived_Pulse_Pressure",
+      "coefficient": -0.008618448414411744
+    },
+    {
+      "feature": "Body Temperature",
+      "coefficient": 0.008380402715267979
+    },
+    {
+      "feature": "Diastolic Blood Pressure",
+      "coefficient": 0.007397973445021751
+    },
+    {
+      "feature": "Systolic Blood Pressure",
+      "coefficient": -0.005455836399334499
+    },
+    {
+      "feature": "Derived_MAP",
+      "coefficient": 0.002642694504764538
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flask Backend",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/backend",
+      "module": "flask",
+      "env": {
+        "FLASK_APP": "run.py",
+        "FLASK_ENV": "development",
+        "PYTHONPATH": "${workspaceFolder}/backend"
+      },
+      "args": ["run", "--host=0.0.0.0", "--port=5000"],
+      "jinja": true,
+      "justMyCode": false
+    },
+    {
+      "name": "React Frontend",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "env": {
+        "BROWSER": "none"
+      },
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack",
+      "configurations": ["Flask Backend", "React Frontend"],
+      "stopAll": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# python
+.venv/
+medibora-ehr/backend/venv/
+__pycache__/
+*.pyc
+.env
+venv
