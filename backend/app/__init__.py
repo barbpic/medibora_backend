@@ -17,7 +17,7 @@ def create_app(config_class=Config):
     db.init_app(app)
     jwt.init_app(app)
     migrate.init_app(app, db)
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    CORS(app, supports_credentials=True, origins=["https://genuine-begonia-092ff8.netlify.app"])
     
     # Register blueprints
     from app.routes.auth import auth_bp
