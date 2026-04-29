@@ -28,7 +28,7 @@ def create_app(config_class=Config):
     from app.routes.audit import audit_bp
     from app.routes.clinical import clinical_bp
     
-    app.register_blueprint(auth_bp, url_prefix='/api/auth')
+    app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(patients_bp, url_prefix='/api/patients')
     app.register_blueprint(encounters_bp, url_prefix='/api/encounters')
     app.register_blueprint(users_bp, url_prefix='/api/users')
