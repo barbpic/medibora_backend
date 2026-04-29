@@ -3,7 +3,7 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 
 # Use an absolute import here! (Assuming auth.py is inside your 'app' folder)
-from app.auth import auth_bp  
+from app.routes.auth import auth_bp  
 
 app = create_app()
 migrate = Migrate(app, db)
