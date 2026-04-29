@@ -3,7 +3,6 @@ from flask_migrate import Migrate
 from flask_cors import CORS
 
 # Use an absolute import here! (Assuming auth.py is inside your 'app' folder)
-from app.routes.auth import auth_bp  
 
 app = create_app()
 migrate = Migrate(app, db)
@@ -12,7 +11,7 @@ migrate = Migrate(app, db)
 CORS(app, resources={r"/*": {"origins": "https://genuine-begonia-092ff8.netlify.app"}}, supports_credentials=True)
 
 # 2. Register the blueprint with the /auth prefix
-app.register_blueprint(auth_bp, url_prefix='/auth')
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
